@@ -1,0 +1,13 @@
+{
+  "apiEndpoint": "https://api-develop.akares.xyz/pms-service",
+  "customerApiEndpoint": "https://api-develop.akares.xyz/customer-service",
+  "userApiEndpoint": "https://api-develop.akares.xyz/user-service",
+  "notificationApiEndpoint": "https://api-develop.akares.xyz/notification-service",
+  "apiEndpointAuth": "https://id.akares.xyz/auth/realms/akares/protocol/openid-connect",
+  "authContentType": "application/x-www-form-urlencoded",
+  "clientId": "mobile-app",
+  "scope": "openid",
+  "grantType": "password",
+  "connectTimeout": 15000,
+  "receiveTimeout": 30000
+}

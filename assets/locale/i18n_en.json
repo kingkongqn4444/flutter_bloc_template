@@ -1,0 +1,15 @@
+{
+  "key_ui": {
+    "app_name": "Value Pro"
+
+  },
+  "key_error": {
+
+    "msg_error_change_language": "Failed to change Language"
+  },
+  "key_message": {
+    "remove_success": "Remove Success"
+
+
+  }
+}

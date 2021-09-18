@@ -1,0 +1,1 @@
+export 'result_search_location_model.dart';
