@@ -1,8 +1,7 @@
-import 'package:value_pro/utils/utils.dart';
 import 'package:sdk/flutter_sdk.dart';
 
 import '../app.dart';
-
+import '../utils/utils.dart';
 import 'dependencies.dart';
 
 class AppDependencies {

@@ -12,7 +12,7 @@ import '../../widget/widget.dart';
 class NeedToBuyStepTwoPage extends StatefulWidget {
   final PageController pageController;
 
-  NeedToBuyStepTwoPage({@required this.pageController});
+  const NeedToBuyStepTwoPage({@required this.pageController});
 
   @override
   _NeedToBuyStepTwoPageState createState() => _NeedToBuyStepTwoPageState();
@@ -22,7 +22,7 @@ class _NeedToBuyStepTwoPageState extends State<NeedToBuyStepTwoPage> {
   ThemeData _themeData;
 
   final TextEditingController _locationController =
-      TextEditingController(text: "London Fields, London");
+      TextEditingController(text: 'London Fields, London');
 
   final BehaviorSubject<bool> _isShowKeyBroad =
       BehaviorSubject<bool>.seeded(false);

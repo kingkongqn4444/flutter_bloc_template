@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_common/common.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sdk/flutter_sdk.dart';
-import 'package:value_pro/pages/need_to/need_to.dart';
 
 import '../../constants.dart';
+import '../../extensions/extensions.dart';
 import '../../resources/resources.dart';
 import '../../widget/widget.dart';
-import '../../extensions/extensions.dart';
-import '../../router/router.dart';
+import '../need_to/need_to.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -69,14 +68,14 @@ class _HomePageState extends BaseState<HomePage, BaseBloc> {
           SvgPicture.asset(SVGConstants.icStayHome),
           UIHelper.verticalBox24,
           Text(
-            "Welcome",
+            'Welcome',
             style: themeData.textTheme.headline6.bold.size24
                 .letterSpa(0.6)
                 .textWhite,
           ),
           UIHelper.verticalBox8,
           Text(
-            "Let us help you find apartments around your location",
+            'Let us help you find apartments around your location',
             style: themeData.textTheme.bodyText2.regular
                 .letterSpa(0.6)
                 .heightLine(1.2)
@@ -94,7 +93,7 @@ class _HomePageState extends BaseState<HomePage, BaseBloc> {
       left: MediaQuery.of(context).size.width / 2 - Dimens.size45,
       child: InkWell(
         onTap: () {
-          nextPageBottomToTop(NeedToPage());
+          nextPageBottomToTop(const NeedToPage());
         },
         child: Container(
           width: Dimens.size90,
@@ -116,9 +115,9 @@ class _HomePageState extends BaseState<HomePage, BaseBloc> {
           Container(
             width: double.infinity,
             height: Dimens.size30,
-            decoration:const BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image:  AssetImage(
+                    image: AssetImage(
                       'assets/images/png/img_white_in_home.png',
                     ),
                     fit: BoxFit.fill)),
@@ -139,13 +138,13 @@ class _HomePageState extends BaseState<HomePage, BaseBloc> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Recommend For You",
+                          'Recommend For You',
                           style: themeData.textTheme.subtitle1.semiBold.size18
                               .letterSpa(0.6)
                               .textBlack,
                         ),
                         Text(
-                          "See All",
+                          'See All',
                           style: themeData.textTheme.subtitle2.semiBold.size14
                               .letterSpa(0.6)
                               .textPrimary,
@@ -162,7 +161,7 @@ class _HomePageState extends BaseState<HomePage, BaseBloc> {
                       onRefresh: () async {},
                       onReachEnd: () async {},
                       isLoadingMore: false,
-                      noDataMessage: "",
+                      noDataMessage: '',
                     ),
                   ],
                 ),

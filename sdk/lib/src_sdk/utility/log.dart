@@ -20,26 +20,31 @@ class Log {
     }
   }
 
-  static void _printMap(Map data, {String tag = tag, int tabs = 1, bool isListItem = false, bool isLast = false}) {
-    final bool isRoot = tabs == 1;
-    final String initialIndent = _indent(tabs);
+  static void _printMap(Map data,
+      {String tag = tag,
+      int tabs = 1,
+      bool isListItem = false,
+      bool isLast = false}) {
+    final isRoot = tabs == 1;
+    final initialIndent = _indent(tabs);
     tabs++;
 
     if (isRoot || isListItem) LogUtil.d('$initialIndent{', tag: tag);
 
     data.keys.toList().asMap().forEach((index, key) {
-      final bool isLast = index == data.length - 1;
+      final isLast = index == data.length - 1;
       var value = data[key];
       if (value is String) value = '\"$value\"';
       if (value is Map) {
-        if (value.length == 0)
-          LogUtil.d('${_indent(tabs)} $key: $value${!isLast ? ',' : ''}', tag: tag);
-        else {
+        if (value.isEmpty) {
+          LogUtil.d('${_indent(tabs)} $key: $value${!isLast ? ',' : ''}',
+              tag: tag);
+        } else {
           LogUtil.d('${_indent(tabs)} $key: {', tag: tag);
           _printMap(value, tabs: tabs);
         }
       } else if (value is List) {
-        if (value.length == 0) {
+        if (value.isEmpty) {
           LogUtil.d('${_indent(tabs)} $key: ${value.toString()}', tag: tag);
         } else {
           LogUtil.d('${_indent(tabs)} $key: [', tag: tag);
@@ -57,7 +62,7 @@ class Log {
 
   static void _printList(List list, {String tag = tag, int tabs = 1}) {
     list.asMap().forEach((i, e) {
-      final bool isLast = i == list.length - 1;
+      final isLast = i == list.length - 1;
       if (e is Map) {
         if (e.length == 0) {
           LogUtil.d('${_indent(tabs)}  $e${!isLast ? ',' : ''}', tag: tag);

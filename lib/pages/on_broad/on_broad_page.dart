@@ -48,7 +48,7 @@ class _OnBroadPageState extends BaseState<OnBroadPage, BaseBloc> {
 
   @override
   Widget buildContent(BuildContext context) {
-    return  Container(
+    return Container(
       width: double.infinity,
       child: Column(
         children: [
@@ -57,13 +57,14 @@ class _OnBroadPageState extends BaseState<OnBroadPage, BaseBloc> {
             alignment: Alignment.centerRight,
             child: TextButton(
               onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(context, Routes.homePage, (route) => false);
+                Navigator.pushNamedAndRemoveUntil(
+                    context, Routes.homePage, (route) => false);
               },
               child: StreamBuilder<bool>(
                   stream: _visibleSkip,
                   builder: (context, snapshot) {
                     return Text(
-                      (snapshot?.data??false) ? "" : "SKIP",
+                      (snapshot?.data ?? false) ? '' : 'SKIP',
                       style: themeData
                           .textTheme.subtitle2.semiBold.size14.textPrimary,
                     );
@@ -83,25 +84,25 @@ class _OnBroadPageState extends BaseState<OnBroadPage, BaseBloc> {
                   assetImage: ImageConstants.imgOnBroadOne,
                   title: 'Những properties bán / cho thuê \n hấp dẫn',
                   content:
-                  'KimCasa giúp bạn tìm kiếm những properties \n phù hợp với mong muốn bạn',
+                      'Value Pro giúp bạn tìm kiếm những properties \n phù hợp với mong muốn bạn',
                 ),
                 ContainerImageTitle(
                   assetImage: ImageConstants.imgOnBroadTwo,
-                  title: "Xem nhanh các properties \n đang quan tâm",
+                  title: 'Xem nhanh các properties \n đang quan tâm',
                   content:
-                  "Ứng dụng tự động gợi ý khi xuất hiện \n những properties mới phù hợp với nhu cầu bạn cần",
+                      'Ứng dụng tự động gợi ý khi xuất hiện \n những properties mới phù hợp với nhu cầu bạn cần',
                 ),
                 ContainerImageTitle(
                   assetImage: ImageConstants.imgOnBroadThree,
-                  title: "So sánh để lựa chọn \n chính xác hơn",
+                  title: 'So sánh để lựa chọn \n chính xác hơn',
                   content:
-                  "KimCasa giúp bạn so sánh các properties \n mà bạn đang cân nhắc chọn lựa",
+                      'Value Pro giúp bạn so sánh các properties \n mà bạn đang cân nhắc chọn lựa',
                 ),
                 ContainerImageTitle(
                   assetImage: ImageConstants.imgOnBroadFour,
-                  title: "Ước tính nhanh chóng \n giá nhà & các loại phí",
+                  title: 'Ước tính nhanh chóng \n giá nhà & các loại phí',
                   content:
-                  "KimCasa giúp bạn so sánh các properties \n mà bạn đang cân nhắc chọn lựa",
+                      'Value Pro giúp bạn so sánh các properties \n mà bạn đang cân nhắc chọn lựa',
                 ),
               ],
             ),

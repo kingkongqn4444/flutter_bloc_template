@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_common/common.dart';
 
 import '../resources/resources.dart';
-import 'package:flutter_common/common.dart';
 
 extension TextStyleExt on TextStyle {
   TextStyle get textBlack => textColor(MyColors.primaryBlack);
